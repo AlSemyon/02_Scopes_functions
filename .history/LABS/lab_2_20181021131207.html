@@ -20,7 +20,8 @@ function sort(arr, callback) {
     for (let i = 0; i < arr.length - 1; i++) {
         for (let t = 1; t < arr.length; t++) {
             var result = callback(arr[t], arr[i]);
-            if (result < 0) {
+            if (!result && result !== 0) {
+                console.log(1)
                 let tmp = arr[i];
                 arr[i] = arr[t];
                 arr[t] = tmp;

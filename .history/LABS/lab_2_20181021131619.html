@@ -19,7 +19,7 @@ let arr1 = [ 213, 16, 2058, 54, 10, 1965, 57, 9 ];
 function sort(arr, callback) {
     for (let i = 0; i < arr.length - 1; i++) {
         for (let t = 1; t < arr.length; t++) {
-            var result = callback(arr[t], arr[i]);
+            var result = callback(arr[i], arr[t]);
             if (result < 0) {
                 let tmp = arr[i];
                 arr[i] = arr[t];

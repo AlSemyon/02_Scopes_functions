@@ -17,28 +17,18 @@ let arr = [ 213, 16, 2058, 54, 10, 1965, 57, 9 ];
 let arr1 = [ 213, 16, 2058, 54, 10, 1965, 57, 9 ];
 
 function sort(arr, callback) {
-    for (let i = 0; i < arr.length - 1; i++) {
-        for (let t = 1; t < arr.length; t++) {
-            var result = callback(arr[t], arr[i]);
-            if (result < 0) {
-                let tmp = arr[i];
-                arr[i] = arr[t];
-                arr[t] = tmp;
-            }
-        }        
-    }
-    console.log(arr)
+
 }
 
-function compare(a ,b) {
-    return a - b
+function compare() {
+
 }
 
 sort(arr1, compare)
 
-console.log(arr1)
-
-arr.sort(compare);
+arr.sort(function(a, b){
+    return b - a;
+});
 
 console.log(arr)
 
