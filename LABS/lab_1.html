@@ -19,8 +19,30 @@
 */
 const arr = ["Bill", "Tom", "Sam"]
 
+function toUpperCase(el) {
+  return el.toUpperCase();
+}
 
+function forEach(arr, toUpperCase) {
+  for (var i = 0; i < arr.length; i++) {
+    arr[i] = toUpperCase(arr[i]);
+  }
+  console.log(arr)
+}
 
+forEach(arr, toUpperCase);
+
+arr.forEach(function(item, index, array){
+  array[index] = item.toLowerCase();
+})
+
+console.log(arr)
+
+var newArr = arr.map(function(item, index, array){
+  return item.toLowerCase();
+})
+
+console.log(newArr)
 </script>
 </div>
 </body>
