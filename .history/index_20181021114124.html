@@ -33,11 +33,8 @@ function sayName(first, second){
 	alert(this[first] + " " + this[second]);
 }
 
-
-
-var a = sayName.bind(user, "firstName", "secondName");
-console.log(a)
-sayName.bind(user1, "firstName", "patronymic"); 
+sayName.call(user, "firstName", "secondName");
+sayName.call(null, "firstName", "patronymic"); 
 
 </script>
 </div>
